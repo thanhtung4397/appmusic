@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingRight="20dp">
+        <TextView
+            android:paddingRight="50dp"
+            android:paddingLeft="50dp"
+            android:paddingTop="200dp"
+            android:text="Đăng Nhập"
+            android:textSize="50sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/taikhoan"
+            android:hint="Tên đăng nhập"/>
+        <EditText
+            android:inputType="textPassword"
+            android:password="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/matkhau"
+            android:hint="Mật khẩu"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btDangnhap"
+            android:text="Đăng Nhập"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btDangky"
+            android:text="Đăng Ký Tài Khoản"/>
+    </LinearLayout>
+
+</LinearLayout>
