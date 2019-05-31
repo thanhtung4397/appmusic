@@ -62,8 +62,4 @@ public class Fragment_dia_nhac extends Fragment {
         objectAnimator.start();
         Picasso.with(getContext()).load(hinhanh).into(circleImageView);
     }
-    public  void Lyric(String lyric){
-        objectAnimator.start();
-       Picasso.with(getContext()).load(lyric).into((Target) recyclerViewLyric);
-    }
 }

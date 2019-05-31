@@ -167,7 +167,6 @@ public class PlayNhacActivity extends AppCompatActivity {
                         }
                         new PlayMP3().execute(mangbaihat.get(position).getLinhbaihat());
                         fragment_dia_nhac.Playnhac(mangbaihat.get(position).getHinhbaihat());
-                        fragment_dia_nhac.Lyric(mangbaihat.get(position).getLyric());
                         getSupportActionBar().setTitle(mangbaihat.get(position).getTenbaihat());
                         UpdateTime();
                     }
@@ -213,7 +212,6 @@ public class PlayNhacActivity extends AppCompatActivity {
                         }
                         new PlayMP3().execute(mangbaihat.get(position).getLinhbaihat());
                         fragment_dia_nhac.Playnhac(mangbaihat.get(position).getHinhbaihat());
-                        fragment_dia_nhac.Lyric(mangbaihat.get(position).getLyric());
                         getSupportActionBar().setTitle(mangbaihat.get(position).getTenbaihat());
                         UpdateTime();
                     }
@@ -284,7 +282,7 @@ public class PlayNhacActivity extends AppCompatActivity {
         if(mangbaihat.size() > 0) {
             getSupportActionBar().setTitle(mangbaihat.get(0).getTenbaihat());
             new PlayMP3().execute(mangbaihat.get(0).getLinhbaihat());
-            fragment_dia_nhac.Lyric(mangbaihat.get(position).getLyric());
+
             imgplay.setImageResource(R.drawable.iconpause);
         }
     }
@@ -377,7 +375,7 @@ public class PlayNhacActivity extends AppCompatActivity {
                         }
                         new PlayMP3().execute(mangbaihat.get(position).getLinhbaihat());
                         fragment_dia_nhac.Playnhac(mangbaihat.get(position).getLinhbaihat());
-                        fragment_dia_nhac.Lyric(mangbaihat.get(position).getLyric());
+
                         getSupportActionBar().setTitle(mangbaihat.get(position).getTenbaihat());
                     }
 
