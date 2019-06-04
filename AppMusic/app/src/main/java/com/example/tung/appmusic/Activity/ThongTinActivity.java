@@ -3,6 +3,8 @@ package com.example.tung.appmusic.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -41,7 +43,7 @@ import retrofit2.Response;
 public class ThongTinActivity extends AppCompatActivity {
 
     Button btnThoat;
-    TextView txtTTten,txtTTdongnhac;
+    TextView txtTTten,txtTTdongnhac,txtKhongco;
 
     RecyclerView recyclerViewDongnhac;
     SearchDongnhavAdapter searchDongnhavAdapter;
@@ -55,6 +57,7 @@ public class ThongTinActivity extends AppCompatActivity {
         txtTTten = findViewById(R.id.txtTTten);
         txtTTdongnhac = findViewById(R.id.txtTTdongnhac);
         btnThoat = findViewById(R.id.btn_thoat);
+        txtKhongco = findViewById(R.id.textviewchuacapnhat);
         recyclerViewDongnhac = findViewById(R.id.recyclerViewDongnhac);
         toolbar = findViewById(R.id.toolbarsearchdongnhac);
 
@@ -73,10 +76,13 @@ public class ThongTinActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.timkiem_view,menu);
-        MenuItem menuItem = menu.findItem(R.id.menu_timkiem);
+        getMenuInflater().inflate(R.menu.dongnhac_view,menu);
+        MenuItem menuItem = menu.findItem(R.id.search_dongnhac);
         final SearchView searchView = (SearchView) menuItem.getActionView();
-       // searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        String str = getIntent().getStringExtra("dongnhac");
+        searchView.setQuery(str,true);
+        searchView.setEnabled(true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -86,7 +92,7 @@ public class ThongTinActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
+              //  SearchTukhoadongnhac(newText);
                 return false;
             }
         });
@@ -114,9 +120,11 @@ public class ThongTinActivity extends AppCompatActivity {
                     searchDongnhavAdapter = new SearchDongnhavAdapter(getApplication(),mangbaihat);
                     LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplication());
                     recyclerViewDongnhac.setLayoutManager(linearLayoutManager);
+                    txtKhongco.setVisibility(View.GONE);
                     recyclerViewDongnhac.setAdapter(searchDongnhavAdapter);
                 }else {
-
+                    recyclerViewDongnhac.setVisibility(View.GONE);
+                    txtKhongco.setVisibility(View.VISIBLE);
                 }
             }
 

@@ -33,7 +33,7 @@
         <TextView
             android:textSize="15sp"
             android:maxWidth="200dp"
-            android:textColor="#305885"
+            android:textColor="#0A0A0A"
             android:text="Tên Ca Sĩ"
             android:ellipsize="end"
             android:maxLines="1"

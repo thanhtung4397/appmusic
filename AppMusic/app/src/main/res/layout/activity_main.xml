@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/custom_bachgroup"
     tools:context=".Activity.MainActivity">
 
     <android.support.v4.view.ViewPager
@@ -26,6 +27,9 @@
         app:tabTextColor="#000000">
     </android.support.design.widget.TabLayout>
     <Button
+        android:textSize="20dp"
+        android:background="#058546"
+        android:textColor="#00E5FF"
         android:id="@+id/btn_Thongtin"
         android:text="Thông Tin"
         android:layout_width="match_parent"

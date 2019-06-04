@@ -62,6 +62,7 @@ public class Dangnhapctivity extends AppCompatActivity {
                             if(mangaccount.size()>0){
                                 Intent intent = new Intent(Dangnhapctivity.this,ThongTinActivity.class);
                                 intent.putExtra("mangaccount",mangaccount);
+                                intent.putExtra("dongnhac",mangaccount.get(0).getIdDongnhac());
                                 startActivity(intent);
 
                             }
@@ -72,25 +73,7 @@ public class Dangnhapctivity extends AppCompatActivity {
                             Toast.makeText(Dangnhapctivity.this, "sai nhé!!!", Toast.LENGTH_SHORT).show();
                         }
                     });
-//                    final Dataservice dataservice = APIService.getService();
-//                    Call<List<Account>> callback = dataservice.Logindata(Taikhoan,Matkhau);
-//                    callback.enqueue(new Callback<List<Account>>() {
-//                        @Override
-//                        public void onResponse(Call<List<Account>> call, Response<List<Account>> response) {
-//                            ArrayList<Account> mangaccount = (ArrayList<Account>) response.body();
-//                            if(mangaccount.size()>0) {
-//                                Intent intent = new Intent(Dangnhapctivity.this, MainActivity.class);
-//                                intent.putExtra("mangaccount",mangaccount);
-//                                startActivity(intent);
-//                               // Log.d("bbb",mangaccount.get(0).getName());
-//                            }
-//                        }
-//
-//                        @Override
-//                        public void onFailure(Call<List<Account>> call, Throwable t) {
-//                            Toast.makeText(Dangnhapctivity.this, "sai", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
+
                 }
             }
         });

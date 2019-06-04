@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:background="@drawable/custom_bachgroup"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -18,7 +19,7 @@
         <TextView
 
             android:textSize="17sp"
-            android:textColor="#ffff"
+            android:textColor="#050505"
             android:text="Tên Ca Khúc"
             android:singleLine="true"
             android:maxWidth="250dp"
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content" />
         <TextView
             android:textSize="12sp"
-            android:textColor="#ffff"
+            android:textColor="#020202"
             android:text="Tên Ca Sĩ"
             android:singleLine="true"
             android:ellipsize="end"

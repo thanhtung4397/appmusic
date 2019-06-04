@@ -35,6 +35,7 @@ public class LyricAdapter extends RecyclerView.Adapter<LyricAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         Baihatduocthich baihat = mangbaihat.get(i);
         viewHolder.txtlyric.setText(baihat.getLyric());
+        viewHolder.txttenbaihat.setText(baihat.getTenbaihat());
     }
 
     @Override
@@ -44,10 +45,11 @@ public class LyricAdapter extends RecyclerView.Adapter<LyricAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView txtlyric;
+        TextView txtlyric,txttenbaihat;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtlyric = itemView.findViewById(R.id.textviewlyric);
+            txttenbaihat = itemView.findViewById(R.id.tenbaihat);
         }
     }
 }
