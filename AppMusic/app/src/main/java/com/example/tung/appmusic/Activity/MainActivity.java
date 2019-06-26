@@ -11,7 +11,10 @@ import android.widget.Button;
 import com.example.tung.appmusic.Adapter.MainViewPagerAdapter;
 import com.example.tung.appmusic.Fragment.Fragment_Tim_Kiem;
 import com.example.tung.appmusic.Fragment.Fragment_Trang_Chu;
+import com.example.tung.appmusic.Model.Account;
 import com.example.tung.appmusic.R;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
     private  void chuyenmanghinh(){
         Intent intent = new Intent(this,ThongTinActivity.class);
+//        ArrayList<Account> mangaccount = new ArrayList<Account>();
+//        intent.putExtra("mangaccount",mangaccount);
+//        intent.putExtra("dongnhac",mangaccount.get(0).getIdDongnhac());
         startActivity(intent);
     }
 

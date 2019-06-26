@@ -19,7 +19,7 @@
         <TextView
 
             android:textSize="17sp"
-            android:textColor="#050505"
+            android:textColor="#FAFAFA"
             android:text="Tên Ca Khúc"
             android:singleLine="true"
             android:maxWidth="250dp"

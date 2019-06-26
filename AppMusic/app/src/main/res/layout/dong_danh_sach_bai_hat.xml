@@ -41,7 +41,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="Ca Sĩ"
-            android:textColor="#DD030303"
+            android:textColor="#DDFDFCFC"
             android:textSize="20sp" />
 
         <ImageView

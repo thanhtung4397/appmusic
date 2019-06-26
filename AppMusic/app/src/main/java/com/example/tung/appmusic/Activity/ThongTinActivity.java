@@ -3,7 +3,9 @@ package com.example.tung.appmusic.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,32 +44,57 @@ import retrofit2.Response;
 
 public class ThongTinActivity extends AppCompatActivity {
 
-    Button btnThoat;
+    Button btnThoat,btnDangxuat;
     TextView txtTTten,txtTTdongnhac,txtKhongco;
 
     RecyclerView recyclerViewDongnhac;
     SearchDongnhavAdapter searchDongnhavAdapter;
     Toolbar toolbar;
+
+    SharedPreferences sharedPreferences;
+
+    SharedPreferences.Editor editor;
+
+    private void initPreferences() {
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        editor = sharedPreferences.edit();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thong_tin);
 
+        initPreferences();
 
         txtTTten = findViewById(R.id.txtTTten);
         txtTTdongnhac = findViewById(R.id.txtTTdongnhac);
         btnThoat = findViewById(R.id.btn_thoat);
+        btnDangxuat = findViewById(R.id.btn_dangxuat);
         txtKhongco = findViewById(R.id.textviewchuacapnhat);
         recyclerViewDongnhac = findViewById(R.id.recyclerViewDongnhac);
         toolbar = findViewById(R.id.toolbarsearchdongnhac);
 
-
         init();
+
+
         btnThoat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ThongTinActivity.this,MainActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnDangxuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(v == btnDangxuat){
+                    editor.clear();
+                    editor.commit();
+                    System.exit(0);
+                    finish();
+                }
             }
         });
 

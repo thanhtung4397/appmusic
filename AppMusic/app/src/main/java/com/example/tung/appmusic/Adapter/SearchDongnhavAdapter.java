@@ -85,10 +85,10 @@ public class SearchDongnhavAdapter extends  RecyclerView.Adapter<SearchDongnhavA
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
                             String kq = response.body();
-                            if( kq.equals("success")){
+                            if( kq.equals("Success")){
                                 Toast.makeText(context, "Đã Thích", Toast.LENGTH_SHORT).show();
                             }else {
-                                Toast.makeText(context, "Lỗi", Toast.LENGTH_SHORT).show();
+                              //  Toast.makeText(context, "Lỗi", Toast.LENGTH_SHORT).show();
                             }
                         }
 

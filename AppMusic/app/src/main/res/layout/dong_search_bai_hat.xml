@@ -13,7 +13,7 @@
     <TextView
         android:id="@+id/textviewSearchTenbaihat"
         android:textSize="18sp"
-        android:textColor="#f000"
+        android:textColor="#070707"
         android:text="Tên Bài Hát"
         android:layout_toRightOf="@+id/imageviewSearchbaihat"
         android:layout_marginLeft="5dp"
@@ -25,7 +25,7 @@
     <TextView
         android:id="@+id/textviewSearchTencasi"
         android:textSize="18sp"
-        android:textColor="#E4020202"
+        android:textColor="#E4FAF7F7"
         android:text="Tên Ca Sĩ"
         android:layout_below="@+id/textviewSearchTenbaihat"
         android:layout_toRightOf="@+id/imageviewSearchbaihat"

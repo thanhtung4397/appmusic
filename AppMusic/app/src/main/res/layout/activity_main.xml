@@ -29,7 +29,7 @@
     <Button
         android:textSize="20dp"
         android:background="#058546"
-        android:textColor="#00E5FF"
+        android:textColor="#FAF6F6"
         android:id="@+id/btn_Thongtin"
         android:text="Thông Tin"
         android:layout_width="match_parent"
